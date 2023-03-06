@@ -1,32 +1,28 @@
 
-h1 {
-    text-align: center;
-    color:rgb(0, 132, 255);
-}
-
 #header {
-    background-color: rgb(243, 186, 99);
+    background-color: rgb(36, 35, 35);
+    transition: margin-left .5s;
+    padding: 20px;
 }
-
-.card {
-    padding: 50px;
-    margin: 10px;
-    border: solid black 1px;
-}
-
-/*copy from nucamp*/
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: rgb(56, 56, 56);
+    background-image: url('images/makiplays-retrowave.gif');
+    
 }
 
+
 h1, h2, h3 {
-    font-family: "Lobster", cursive;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: rgb(0, 132, 255);
+    text-align: center;
 }
 
 .site-footer {
-    background-image: linear-gradient( rgb(255, 205, 69) ,rgb(243, 186, 99), rgb(236, 209, 120));
+    background-image: linear-gradient( rgb(36, 35, 35) ,rgb(56, 56, 56), rgb(96, 99, 100));
     padding: 20px 0;
+    color: white;
 }
 
 .jumbotron {
@@ -40,14 +36,146 @@ h1, h2, h3 {
     min-height: 200px;
 }
 
-.navbar-dark {
-    background-color: rgb(243, 186, 99);
-}
 
 a, a:hover {
     color: inherit;
     text-decoration: none;
   }
 
-  /*end copy*/
 
+/*side navbar styles*/
+.sidenav {
+height: 100%;
+width: 0;
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+background-color: #111;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+}
+
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: #818181;
+display: block;
+transition: 0.3s;
+}
+
+.sidenav a:hover {
+color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+#navbarBtn {
+    color: rgb(0, 132, 255);
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+/**end side nav styles**/
+
+.card {
+    background-color:rgb(36, 35, 35);
+    color:rgb(243, 243, 243);
+    padding: 50px;
+    margin: 10px;
+    border: solid black 1px;
+}
+
+div.card {
+    width: 250px;
+    box-shadow: 10px 4px 8px 0 rgba(235, 226, 226, 0.2), 0 6px 20px 0 rgba(247, 244, 244, 0.19);
+    text-align: center;
+  }
+
+#homeCarousel {
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: 10px 4px 8px 0 rgba(235, 226, 226, 0.2), 0 6px 20px 0 rgba(247, 244, 244, 0.19);
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+#profileicon {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+  }
+
+  /*for cards*/
+  
+  #header {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  #header:hover {
+    opacity: 0.3;
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: #aa0404;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+  h1 {
+    font-size: 90px;
+  }
